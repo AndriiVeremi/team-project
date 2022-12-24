@@ -53,6 +53,7 @@ img {
 }
 
 .container {
+  max-width: 1200px;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
@@ -75,6 +76,20 @@ img {
     padding-left: 16px;
     padding-right: 16px;
   }
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  margin: -1px;
 }
 
 .button__product {
@@ -155,7 +170,8 @@ img {
   font-size: 12px;
   line-height: 1.25;
   text-align: center;
-  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
   color: #f8d24e;
   background-color: initial;
   border: none;
@@ -291,58 +307,211 @@ img {
   background-color: #ababab;
 }
 
-.container {
-  background-color: #aec6a5;
-  margin: 0 auto;
-  padding: 61px 50px 50px;
-  width: 320px;
+.header {
+  height: 64px;
+  background-color: #84a178;
+}
+
+.header .container {
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .header .container {
+    padding-top: 12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header .container {
+    padding-top: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header .container {
+    padding-top: 8px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .header .container {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    margin-right: 308px;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+  .nav {
+    margin-left: auto;
+  }
+}
+
+.nav__list {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .nav__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 28px;
+}
+
+.nav__link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  align-items: center;
+  color: #fcfcfc;
+}
+.nav__link:hover {
+  color: #f8d24e;
+}
+
+.menu__toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  color: #fcfcfc;
+}
+@media screen and (min-width: 768px) {
+  .menu__toggle {
+    margin-right: 32px;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .menu__toggle {
+    display: none;
+  }
+}
+
+.button__buy {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .button__buy {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .button__buy {
+    margin-left: auto;
+  }
 }
 
 .about__title {
-  font-family: "Seymour One";
   font-style: normal;
   font-size: 18px;
   line-height: 1.2222222222;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 12px;
+}
+@media screen and (min-width: 768px) {
+  .about__title {
+    font-size: 22px;
+    line-height: 1.2272727273;
+    letter-spacing: 0.04em;
+  }
 }
 
 .about__how {
   font-family: "Seymour One";
-  padding-bottom: 12px;
+  margin-bottom: 32px;
   font-size: 30px;
   line-height: 1.2666666667;
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
+@media screen and (min-width: 768px) {
+  .about__how {
+    margin-bottom: 72px;
+    font-size: 34px;
+    line-height: 1.2647058824;
+    letter-spacing: 0.06em;
+  }
+}
 
-.about__description {
+.container-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .container-wrap {
+    align-items: flex-start;
+  }
 }
 
 .about__text {
   font-size: 12px;
   line-height: 1.75;
   letter-spacing: 0.04em;
-  padding-bottom: 4px;
+}
+
+.about__text1 {
+  margin-bottom: 4px;
+}
+@media screen and (min-width: 768px) {
+  .about__text1 {
+    margin-bottom: 8px;
+  }
 }
 
 .about__text2 {
   font-size: 12px;
   line-height: 1.5833333333;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .about__text2 {
+    line-height: 1.75;
+    margin-bottom: 8px;
+  }
+}
+
+.about__text3 {
+  line-height: 1.9166666667;
+  margin-bottom: 32px;
+}
+@media screen and (max-width: 767px) {
+  .about__text3 {
+    display: none;
+  }
 }
 
 .about__img {
-  max-width: 279px;
+  max-width: 290px;
+}
+@media screen and (min-width: 768px) {
+  .about__img {
+    max-width: 330px;
+  }
 }
 
 .about__img-box {
-  display: block;
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: auto;
-  padding-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .about__btn {
@@ -638,8 +807,20 @@ img {
     height: 42px;
   }
 }
+.product-modal__form__input:not(:-moz-placeholder-shown):required:valid {
+  border-color: green;
+}
+.product-modal__form__input:not(:-ms-input-placeholder):required:valid {
+  border-color: green;
+}
 .product-modal__form__input:not(:placeholder-shown):required:valid {
   border-color: green;
+}
+.product-modal__form__input:not(:-moz-placeholder-shown):required:invalid {
+  border-color: red;
+}
+.product-modal__form__input:not(:-ms-input-placeholder):required:invalid {
+  border-color: red;
 }
 .product-modal__form__input:not(:placeholder-shown):required:invalid {
   border-color: red;
@@ -735,8 +916,8 @@ img {
   padding: 28px 20px;
   min-width: 280px;
   height: 968px;
-  background-color: #fcfcfc;
-  border: 2px solid #f8d24e;
+  background-color: rgb(252, 252, 252);
+  border: 2px solid rgb(248, 210, 78);
   border-radius: 10px;
 }
 
@@ -757,16 +938,17 @@ img {
   height: 11px;
 }
 
-/* .modal-close-btn:hover,
+.modal-close-btn:hover,
 .modal-close-btn:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-} */
+}
+
 .modal-title {
   margin-top: 0;
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
-  color: var(--title-text-color);
+  color: rgb(19, 19, 19);
   font-family: "Seymour One";
   font-size: 20px;
   font-weight: 400;
@@ -825,6 +1007,7 @@ img {
 }
 
 .modal-shift-text {
+  font-family: "Montserrat";
   font-size: 10px;
   line-height: 1.2;
   color: #131313;
@@ -836,26 +1019,28 @@ img {
   justify-content: space-around;
   width: 43px;
   height: 43px;
-  background-color: #9cbe8f;
-  border: 2px solid #9cbe8f;
+  background-color: rgb(132, 161, 120);
+  border: 2px solid rgb(132, 161, 120);
   border-radius: 50%;
   box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
 }
 
 .modal-shift-value {
+  font-family: "Montserrat";
   font-weight: 500;
   font-size: 10px;
   line-height: 2.8;
-  color: #131313;
+  color: rgb(19, 19, 19);
 }
 
 .modal-text {
   margin-bottom: 24px;
+  font-family: "Montserrat";
   font-weight: 500;
   font-size: 20px;
   line-height: 1.4;
   text-align: center;
-  color: #131313;
+  color: rgb(19, 19, 19);
 }
 
 .ingredients-list {
@@ -873,10 +1058,11 @@ img {
 
 .ingredients-text {
   justify-self: baseline;
+  font-family: "Montserrat";
   font-weight: 400;
   font-size: 14px;
   letter-spacing: 0.04em;
-  color: #131313;
+  color: rgb(19, 19, 19);
 }
 
 .modal-form {
@@ -890,14 +1076,29 @@ img {
   width: 100%;
   height: 42px;
   background: rgba(248, 210, 78, 0.1);
-  border: 1px solid #84a178;
+  border: 1px solid rgb(132, 161, 120);
   border-radius: 10px;
 }
 
-.modal-form-input::placeholder {
+.modal-form-input::-moz-placeholder {
+  font-family: "Montserrat";
   font-size: 14px;
   line-height: 1.4;
-  color: #131313;
+  color: rgb(19, 19, 19);
+}
+
+.modal-form-input:-ms-input-placeholder {
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgb(19, 19, 19);
+}
+
+.modal-form-input::placeholder {
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgb(19, 19, 19);
 }
 
 /* .modal-form-input:focus {
@@ -913,7 +1114,7 @@ img {
   height: 84px;
   resize: none;
   background: rgba(248, 210, 78, 0.1);
-  border: 1px solid #84a178;
+  border: 1px solid rgb(132, 161, 120);
   border-radius: 10px;
 }
 
@@ -921,10 +1122,23 @@ img {
   outline: none;
   border-color: var(--accent-color);
 } */
-.modal-form-comment::placeholder {
+.modal-form-comment::-moz-placeholder {
+  font-family: "Montserrat";
   font-size: 14px;
   line-height: 1.4;
-  color: #131313;
+  color: rgb(19, 19, 19);
+}
+.modal-form-comment:-ms-input-placeholder {
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgb(19, 19, 19);
+}
+.modal-form-comment::placeholder {
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgb(19, 19, 19);
 }
 
 .modal-form-submit {
@@ -934,8 +1148,9 @@ img {
   align-self: center;
   border: none;
   border-radius: 10px;
-  color: #131313;
-  background-color: #f8d24e;
+  color: rgb(19, 19, 19);
+  background-color: rgb(248, 210, 78);
+  font-family: "Montserrat";
   font-weight: 600;
   font-size: 14px;
   line-height: 1.2;
