@@ -1,98 +1,104 @@
-<section class="section product" id="product">
-  <div class="contasiner product__container">
+<section class="product" id="product">
+  <div class="contasiner">
     <p class="product__label">100% natural</p>
     <h2 class="product__title">products</h2>
-    <ul class="list product__card-set">
-      <li class="item product__card-set__item">
-        <img
-          class="product__card-set__img"
-          srcset="
-            ./images/product/img1-mobile_tablet.png    280w,
-            ./images/product/img1-mobile_tablet.png    330w,
-            ./images/product/img1-desctop.png          491w,
-            ./images/product/img1-mobile_tablet-2x.png 560w,
-            ./images/product/img1-mobile_tablet-2x.png 660w,
-            ./images/product/img1-desctop-2x.png       982w
-          "
-          src="./images/product/img1-mobile_tablet.png"
-          alt="ice cream"
-          sizes="(max-width: 767px) 200px, (min-width: 1200px) 302px"
-          width="200"
-        />
-        <div class="product__card-set__circle circle__green"></div>
-        <h3 class="product__card-set__title">ice cream</h3>
-        <p class="product__card-set__text">
+    <div class="grid">
+      <div class="grid__card">
+        <div class="product__img-box">
+          <img
+            class="product__img"
+            srcset="
+              ./images/product/img1-mobile_tablet.png    280w,
+              ./images/product/img1-mobile_tablet.png    330w,
+              ./images/product/img1-desctop.png          491w,
+              ./images/product/img1-mobile_tablet-2x.png 560w,
+              ./images/product/img1-mobile_tablet-2x.png 660w,
+              ./images/product/img1-desctop-2x.png       982w
+            "
+            src="./images/product/img1-mobile_tablet.png"
+            alt="ice cream"
+            sizes="(max-width: 767px) 200px, (min-width: 1200px) 302px"
+            width="200"
+          />
+        </div>
+        <div class="product__card__circle circle__green"></div>
+        <h3 class="product__card-title">ice cream</h3>
+        <p class="product__card-text">
           Soft ice cream with a delicate taste. Made with milk, cream, sugar and
           natural stabilizer
         </p>
         <!-- кнопка открытия модалки -->
 
-        <button class="product__card-set__btn js-open-modal" data-modal="1">
-          <svg class="product__card-set__btn__icon" width="40" height="16">
+        <button class="product__btn js-open-modal" data-modal="1">
+          <svg class="product__svg" width="40" height="16">
             <use href="./images/product/icon-sprite.svg#icon-Arrow"></use>
           </svg>
         </button>
-      </li>
-      <li class="item product__card-set__item item__yellow">
-        <img
-          class="product__card-set__img"
-          srcset="
-            ./images/product/img2-mobile_tablet.png    280w,
-            ./images/product/img2-mobile_tablet.png    330w,
-            ./images/product/img2-desctop.png          491w,
-            ./images/product/img2-mobile_tablet-2x.png 560w,
-            ./images/product/img2-mobile_tablet-2x.png 660w,
-            ./images/product/img2-desctop-2x.png       982w
-          "
-          src="./images/product/img2-mobile_tablet.png"
-          alt="ice coffee"
-          width="200"
-          sizes="(max-width: 767px) 200px, (min-width: 1200px) 302px"
-        />
+      </div>
+      <div class="grid__card">
+        <div class="product__img-box">
+          <img
+            class="product__img"
+            srcset="
+              ./images/product/img2-mobile_tablet.png    280w,
+              ./images/product/img2-mobile_tablet.png    330w,
+              ./images/product/img2-desctop.png          491w,
+              ./images/product/img2-mobile_tablet-2x.png 560w,
+              ./images/product/img2-mobile_tablet-2x.png 660w,
+              ./images/product/img2-desctop-2x.png       982w
+            "
+            src="./images/product/img2-mobile_tablet.png"
+            alt="ice coffee"
+            width="200"
+            sizes="(max-width: 767px) 200px, (min-width: 1200px) 302px"
+          />
+        </div>
 
-        <div class="product__card-set__circle circle__yellow"></div>
-        <h3 class="product__card-set__title">ice coffee</h3>
-        <p class="product__card-set__text">
+        <div class="product__card-circle circle__yellow"></div>
+        <h3 class="product__card-title">ice coffee</h3>
+        <p class="product__card-text">
           Fragrant invigorating drink created from 100% natural ingredients
           without the use of preservatives and flavor enhancers
         </p>
         <!-- кнопка открытия модалки -->
-        <button class="product__card-set__btn js-open-modal" data-modal="6">
-          <svg class="product__card-set__btn__icon" width="40" height="16">
+        <button class="product__btn js-open-modal" data-modal="6">
+          <svg class="product__svg" width="40" height="16">
             <use href="./images/product/icon-sprite.svg#icon-Arrow"></use>
           </svg>
         </button>
-      </li>
-      <li class="item product__card-set__item item__brown">
-        <img
-          class="product__card-set__img"
-          srcset="
-            ./images/product/img3-mobile_tablet.png    280w,
-            ./images/product/img3-mobile_tablet.png    330w,
-            ./images/product/img3-desctop.png          491w,
-            ./images/product/img3-mobile_tablet-2x.png 560w,
-            ./images/product/img3-mobile_tablet-2x.png 660w,
-            ./images/product/img3-desctop-2x.png       982w
-          "
-          src="./images/product/img3-mobile_tablet.png"
-          alt="milkshakes"
-          width="200"
-          sizes="(max-width: 767px) 200px, (min-width: 1200px) 302px"
-        />
+      </div>
+      <div class="grid__card">
+        <div class="product__img-box">
+          <img
+            class="product__img"
+            srcset="
+              ./images/product/img3-mobile_tablet.png    280w,
+              ./images/product/img3-mobile_tablet.png    330w,
+              ./images/product/img3-desctop.png          491w,
+              ./images/product/img3-mobile_tablet-2x.png 560w,
+              ./images/product/img3-mobile_tablet-2x.png 660w,
+              ./images/product/img3-desctop-2x.png       982w
+            "
+            src="./images/product/img3-mobile_tablet.png"
+            alt="milkshakes"
+            width="200"
+            sizes="(max-width: 767px) 200px, (min-width: 1200px) 302px"
+          />
+        </div>
 
         <div class="product__card-set__circle circle__brown"></div>
-        <h3 class="product__card-set__title">milkshakes</h3>
-        <p class="product__card-set__text">
+        <h3 class="product__card-title">milkshakes</h3>
+        <p class="product__card-text">
           Sweet drinks based on milk and ice cream, supplemented with syrups,
           fruits, berries and other sweets of your choice
         </p>
         <!-- кнопка открытия модалки -->
-        <button class="product__card-set__btn js-open-modal" data-modal="7">
-          <svg class="product__card-set__btn__icon" width="40" height="16">
+        <button class="product__btn js-open-modal" data-modal="7">
+          <svg class="product__svg" width="40" height="16">
             <use href="./images/product/icon-sprite.svg#icon-Arrow"></use>
           </svg>
         </button>
-      </li>
-    </ul>
+      </div>
+    </div>
   </div>
 </section>
